@@ -1,4 +1,5 @@
 // Web API 1
+console.log('=== aplikasi quotes dari dummy json ===');
 const axios = require('axios');
 axios
   .get('https://dummyjson.com/quotes')
@@ -11,7 +12,8 @@ axios
     let author = data.map((item) => {
       return item.author;
     });
-    console.log(`name: ${author} quote: ${quote}`);
+    console.log(`name: ${author}`);
+    console.log(`quote: ${quote}`);
   })
   // gagal GET
   .catch(function (error) {
@@ -19,6 +21,7 @@ axios
   });
 
 // Web API 2
+// console.log('=== aplikasi products dari dummy json ===');
 // const axios = require('axios');
 // axios
 //   .get('https://dummyjson.com/products')
@@ -34,7 +37,9 @@ axios
 //     let price = data.map((item) => {
 //       return item.price;
 //     });
-//     console.log(`product name: ${title}, category: ${category}, price: ${price}`);
+//     console.log(`product name: ${title}`);
+//     console.log(`category: ${category}`);
+//     console.log(`price: ${price}`);
 //   })
 //   // gagal GET
 //   .catch(function (error) {

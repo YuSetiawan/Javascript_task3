@@ -1,10 +1,10 @@
-// const axios = require('axios');
+const axios = require('axios');
 axios
   .get('https://jsonplaceholder.typicode.com/users/')
   // berhasil GET
   .then((response) => {
     response.data.map((item) => {
-      console.log(item.name);
+      console.log(`name: ${item.name}`);
     });
   })
   // gagal GET
